@@ -42,7 +42,7 @@ const guideSections: GuideSection[] = [
     icon: '🍳',
     instructions: [
       'Coffee & Tea: Keurig, drip coffee maker, and electric kettle on the coffee bar. A starter set of K-cups, sugar, creamer, and tea selections provided. Just add mountain-fresh water!',
-      'Dishwasher: We don\'t have one! But there\'s something zen about washing dishes with a mountain view. Dish soap and sponge provided!',
+      'Dishwasher: Great news — we have a brand new dishwasher! Load it up, add a detergent pod from under the sink, and press Start. It\'s that easy.',
       'Oven: Preheat by pressing Bake, setting temperature, and pressing Start. The oven will beep when it\'s ready to go!',
       'Microwave: Mounted a bit lower than you might be used to — your shoulders will thank you! Perfectly safe and easy to reach.',
       'Refrigerator: Ice maker is in the freezer. The mountain tap water is as fresh as it gets, but a Brita filter dispenser is available for those who prefer it.',
@@ -56,13 +56,10 @@ const guideSections: GuideSection[] = [
     title: 'Fireplaces',
     icon: '🔥',
     instructions: [
-      'Type: Gas fireplace - no wood or fire-starting materials needed.',
-      'Operation: Locate the wall switch or remote control near the fireplace.',
-      'To Turn On: Flip the switch to ON or press the power button on the remote.',
-      'Flame Adjustment: Use the remote to adjust flame height if available.',
-      'To Turn Off: Flip the switch to OFF or press power button. Ensure the flame is completely out.',
+      'Status: The fireplaces are currently being replaced and should not be turned on.',
+      'Since we\'re heading into the warm season, you won\'t need them — enjoy the mountain breeze instead!',
     ],
-    tips: 'The gas fireplace provides ambiance and supplemental heat. Keep flammable items at least 3 feet away from the fireplace.',
+    tips: 'If you have any questions about the fireplaces, please contact us.',
   },
   {
     id: 'thermostat',
@@ -94,11 +91,11 @@ const guideSections: GuideSection[] = [
     title: 'TV & Entertainment',
     icon: '📺',
     instructions: [
-      'Smart TVs: Located in the living room, most bedrooms, game room, and kids game room.',
+      'Smart TVs: Located in the living room, most bedrooms, poker room, and game room.',
       'Streaming: You can log into your own streaming accounts on the Smart TVs. Please remember to log out before you leave.',
-      'Kids Game Room: Equipped with Xbox and Nintendo Switch for the kids to enjoy. Controllers are in the cabinet below.',
+      'Game Room: Equipped with Xbox and Nintendo Switch for everyone to enjoy. Controllers are in the cabinet below.',
     ],
-    tips: 'Board games and cards are available in the game room closet for family fun.',
+    tips: 'Board games and cards are available in the poker room closet for family fun.',
     listStyle: 'bullets',
   },
   {
@@ -107,10 +104,10 @@ const guideSections: GuideSection[] = [
     icon: '🧺',
     instructions: [
       'Location: Washer and dryer are in the basement at the foot of the stairs.',
+      'Brand New: Both the washer and dryer are brand new and work great!',
       'Washer: Add detergent to dispenser, select cycle, and press Start.',
       'Dryer: Clean the lint trap before each use. Select heat level and press Start.',
-      'Capacity: Standard size - avoid overloading for best results.',
-      'Note: Our dryer likes to take its time — it may need an extra cycle or two, so plan accordingly!',
+      'After Use: Please leave the washer door and detergent dispenser open after your last load — this prevents mold and mildew buildup.',
     ],
     tips: 'Please complete any laundry loads before check-out. Do not leave wet items in the washer.',
     listStyle: 'bullets',
@@ -247,7 +244,7 @@ export default function HouseGuidePage() {
             </h2>
             <p className="text-mountain leading-relaxed mb-6">
               If you have questions about any of the amenities or encounter any issues,
-              please check the welcome binder for detailed instructions or contact us directly.
+              please check the QR codes posted on the wall by the front door and by the back porch exterior door for detailed instructions, or contact us directly.
             </p>
             <a
               href="mailto:gracethisplacellc@gmail.com"

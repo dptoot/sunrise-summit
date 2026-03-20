@@ -35,31 +35,31 @@ interface SeasonalActivity {
 const outdoorActivities: Attraction[] = [
   {
     name: 'Great Smoky Mountains National Park',
-    distance: '20 min',
+    distance: '35 min',
     description: 'Hiking, wildlife, scenic drives',
     url: 'https://www.nps.gov/grsm/',
   },
   {
     name: 'Blue Ridge Parkway',
-    distance: '15 min',
+    distance: '30 min',
     description: "America's favorite drive, overlooks, trails",
     url: 'https://www.nps.gov/blri/',
   },
   {
     name: 'Cataloochee Valley',
-    distance: '45 min',
+    distance: '60 min',
     description: 'Elk viewing, historic buildings',
     url: 'https://www.nps.gov/grsm/planyourvisit/cataloochee.htm',
   },
   {
     name: 'Sliding Rock',
-    distance: '40 min',
+    distance: '55 min',
     description: 'Natural waterslide, swimming',
     url: 'https://www.fs.usda.gov/recarea/nfsnc/recarea/?recid=48617',
   },
   {
     name: 'Looking Glass Falls',
-    distance: '35 min',
+    distance: '50 min',
     description: 'Stunning 60ft waterfall',
     url: 'https://www.romanticasheville.com/looking_glass_falls.htm',
   },
@@ -75,25 +75,25 @@ const downtownWaynesville = [
 const nearbyTowns: NearbyTown[] = [
   {
     name: 'Asheville',
-    distance: '30 min',
+    distance: '45 min',
     highlights: 'Arts, food, Biltmore Estate',
     url: 'https://www.exploreasheville.com/',
   },
   {
     name: 'Cherokee',
-    distance: '25 min',
+    distance: '40 min',
     highlights: 'Casino, cultural museum, outdoor drama',
     url: 'https://visitcherokeenc.com/',
   },
   {
     name: 'Maggie Valley',
-    distance: '15 min',
+    distance: '30 min',
     highlights: 'Wheels Through Time museum, skiing at Cataloochee',
     url: 'https://www.maggievalley.org/',
   },
   {
     name: 'Sylva',
-    distance: '20 min',
+    distance: '35 min',
     highlights: 'Charming downtown, bookshops',
     url: 'https://www.discoverjacksonnc.com/',
   },
@@ -232,7 +232,8 @@ export default function AttractionsPage() {
             Outdoor Activities
           </h2>
           <p className="text-mountain text-center mb-12 max-w-2xl mx-auto">
-            From national parks to stunning waterfalls, adventure awaits just minutes from your door.
+            From national parks to stunning waterfalls, adventure awaits a scenic mountain drive from your door.
+            The ~15 minute winding road down from the summit is an adventure in itself — enjoy beautiful views around every turn!
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {outdoorActivities.map((attraction) => (
@@ -246,7 +247,7 @@ export default function AttractionsPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-navy text-center mb-4">
             Downtown Waynesville
           </h2>
-          <p className="text-coral font-medium text-center mb-8">10 min drive</p>
+          <p className="text-coral font-medium text-center mb-8">20-25 min drive</p>
           <div className="max-w-3xl mx-auto">
             <div className="bg-cream border border-sand rounded-lg p-8">
               <p className="text-mountain text-lg leading-relaxed mb-6">

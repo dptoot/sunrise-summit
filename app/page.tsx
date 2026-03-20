@@ -141,10 +141,10 @@ export default function Home() {
             </h2>
             <p className="text-mountain text-lg leading-relaxed mb-8">
               Located in the charming town of Waynesville, North Carolina, Sunrise Summit
-              offers the perfect basecamp for exploring the Great Smoky Mountains. Just
-              minutes from the Blue Ridge Parkway and countless hiking trails, our retreat
-              puts you at the heart of Appalachian adventure while providing a peaceful
-              sanctuary to return to each evening.
+              offers the perfect basecamp for exploring the Great Smoky Mountains. A scenic
+              ~15 minute mountain drive connects you to the Blue Ridge Parkway, downtown
+              Waynesville, and countless hiking trails. The winding road up to the summit
+              is part of the adventure — with stunning views around every curve.
             </p>
             <Link
               href="/attractions"

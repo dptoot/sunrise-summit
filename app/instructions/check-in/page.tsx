@@ -72,7 +72,7 @@ export default function CheckInPage() {
                     </h3>
                     <p className="text-mountain leading-relaxed">
                       The driveway can accommodate up to 4 vehicles. Please park in the designated
-                      areas and avoid blocking the garage or turnaround area. If you have a large
+                      areas and avoid blocking the turnaround area. If you have a large
                       vehicle or trailer, please contact us in advance.
                     </p>
                   </div>
@@ -141,12 +141,12 @@ export default function CheckInPage() {
                   </span>
                   <div>
                     <h3 className="font-semibold text-navy text-lg mb-2">
-                      Find the Welcome Binder
+                      Scan the QR Codes
                     </h3>
                     <p className="text-mountain leading-relaxed">
-                      Inside the cabin, you will find a welcome binder on the kitchen counter.
-                      This contains WiFi information, appliance instructions, local recommendations,
-                      and emergency contact numbers.
+                      Look for the QR codes posted on the wall by the front door and by the back
+                      porch exterior door. Scan them to access WiFi information, appliance instructions,
+                      local recommendations, and emergency contact numbers.
                     </p>
                   </div>
                 </li>
@@ -172,7 +172,7 @@ export default function CheckInPage() {
             <div className="bg-white rounded-xl border border-sand p-6 md:p-8">
               <div className="mb-6 p-4 bg-navy/5 rounded-lg">
                 <p className="text-navy font-semibold text-lg">
-                  Check-out Time: 11:00 AM
+                  Check-out Time: 10:00 AM
                 </p>
                 <p className="text-mountain text-sm mt-1">
                   Late check-out may be available upon request, subject to availability and additional fees.
@@ -192,7 +192,7 @@ export default function CheckInPage() {
                   <div>
                     <p className="font-medium text-navy">Dishes</p>
                     <p className="text-mountain text-sm">
-                      Please start the dishwasher with any dirty dishes, or hand wash and put away.
+                      Please start the dishwasher with any dirty dishes.
                     </p>
                   </div>
                 </li>
@@ -216,22 +216,9 @@ export default function CheckInPage() {
                     </svg>
                   </span>
                   <div>
-                    <p className="font-medium text-navy">Linens</p>
+                    <p className="font-medium text-navy">Towels</p>
                     <p className="text-mountain text-sm">
-                      Strip the beds and leave linens in a pile on each bed. No need to make the beds.
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-6 h-6 bg-sand rounded flex items-center justify-center mt-0.5">
-                    <svg className="w-4 h-4 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </span>
-                  <div>
-                    <p className="font-medium text-navy">Thermostat</p>
-                    <p className="text-mountain text-sm">
-                      Set the thermostat to 68°F in winter or 75°F in summer before leaving.
+                      Leave used towels on the tile floor of the main bathroom or near the laundry room.
                     </p>
                   </div>
                 </li>

@@ -95,8 +95,8 @@ export default function AboutPage() {
                 />
                 <AmenityCard
                   icon="🚿"
-                  title="3.5 Bathrooms"
-                  description="Plenty of space for everyone with well-appointed bathrooms throughout the cabin."
+                  title="2 Full + 2 Half Baths"
+                  description="Two full bathrooms and two half baths ensure plenty of space for everyone."
                 />
                 <AmenityCard
                   icon="👨‍👩‍👧‍👦"
@@ -137,14 +137,14 @@ export default function AboutPage() {
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <AmenityCard
-                  icon="🎱"
-                  title="Game Room"
-                  description="Challenge your crew to pool, foosball, or other games in our dedicated game room."
+                  icon="🃏"
+                  title="Poker Room"
+                  description="Gather around the poker table for cards and good conversation."
                 />
                 <AmenityCard
                   icon="🎮"
-                  title="Kids Game Room"
-                  description="A special space for the little ones to play and have fun during your stay."
+                  title="Game Room"
+                  description="Xbox, Nintendo Switch, board games, and more — fun for all ages."
                 />
                 <AmenityCard
                   icon="📺"
@@ -163,7 +163,7 @@ export default function AboutPage() {
                 <AmenityCard
                   icon="🌄"
                   title="Large Deck"
-                  description="Expansive outdoor deck space perfect for morning coffee or evening stargazing."
+                  description="Expansive outdoor deck space with Adirondack chairs around the fire pit, perfect for morning coffee or evening stargazing."
                 />
                 <AmenityCard
                   icon="🏔️"
@@ -204,7 +204,7 @@ export default function AboutPage() {
               </p>
               <p className="font-medium text-navy">
                 Whether it&apos;s the laughter echoing from the game room, quiet
-                conversations by the fire, or the collective gasp as the sunset
+                conversations by the fire, or the collective gasp as the sunrise
                 paints the sky in impossible colors - these are the memories that
                 will stay with you long after you&apos;ve returned home.
               </p>

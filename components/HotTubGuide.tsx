@@ -260,7 +260,7 @@ export default function HotTubGuide() {
               </tr>
               <tr>
                 <td className="py-3 pr-4 font-medium text-navy">Cover is difficult to remove</td>
-                <td className="py-3">Lift from the center; ask for help if needed</td>
+                <td className="py-3">Lift from the right side, fold over to the left, then slide the whole cover to rest in the gap between the hot tub and the wall on the left</td>
               </tr>
             </tbody>
           </table>
