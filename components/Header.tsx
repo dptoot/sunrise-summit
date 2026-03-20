@@ -87,20 +87,15 @@ export default function Header() {
               link.dropdown ? (
                 <div
                   key={link.name}
-                  className="relative py-4 -my-4"
-                  onMouseEnter={() => setOpenDropdown(link.name)}
-                  onMouseLeave={() => setOpenDropdown(null)}
+                  className="group relative py-4 -my-4"
                 >
                   <button
-                    className="text-navy hover:text-mountain transition-colors flex items-center gap-1"
-                    aria-expanded={openDropdown === link.name}
+                    className="text-navy hover:text-mountain transition-colors flex items-center gap-1 peer"
                     aria-haspopup="true"
                   >
                     {link.name}
                     <svg
-                      className={`w-4 h-4 transition-transform ${
-                        openDropdown === link.name ? 'rotate-180' : ''
-                      }`}
+                      className="w-4 h-4 transition-transform group-hover:rotate-180 group-focus-within:rotate-180"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -113,21 +108,19 @@ export default function Header() {
                       />
                     </svg>
                   </button>
-                  {openDropdown === link.name && (
-                    <div className="absolute top-full left-0 pt-1 w-48">
-                      <div className="bg-cream border border-sand rounded-lg shadow-lg py-2">
-                        {link.dropdown.map((item) => (
-                          <Link
-                            key={item.name}
-                            href={item.href}
-                            className="block px-4 py-2 text-navy hover:bg-sand transition-colors"
-                          >
-                            {item.name}
-                          </Link>
-                        ))}
-                      </div>
+                  <div className="absolute top-full left-0 pt-1 w-48 invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-200">
+                    <div className="bg-cream border border-sand rounded-lg shadow-lg py-2">
+                      {link.dropdown.map((item) => (
+                        <Link
+                          key={item.name}
+                          href={item.href}
+                          className="block px-4 py-2 text-navy hover:bg-sand transition-colors"
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
                     </div>
-                  )}
+                  </div>
                 </div>
               ) : (
                 <Link
