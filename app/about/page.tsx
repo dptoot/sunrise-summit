@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { Header, Footer, Hero, Section, AmenityCard } from '@/components';
 
 export const metadata: Metadata = {
@@ -22,7 +23,7 @@ export default function AboutPage() {
         <Hero
           title="About Sunrise Summit"
           subtitle="Your mountain escape awaits"
-          imageSrc="/images/hero.png"
+          imageSrc="/images/cabin-deck-mountain-vista.jpg"
         />
 
         {/* Property Description Section - 2 column layout */}
@@ -54,24 +55,15 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Right: Placeholder Image */}
-            <div className="bg-gradient-to-br from-sand to-mountain/20 rounded-2xl aspect-[4/3] flex items-center justify-center">
-              <div className="text-center text-mountain/60">
-                <svg
-                  className="w-16 h-16 mx-auto mb-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
-                </svg>
-                <p className="text-sm">Property Image</p>
-              </div>
+            {/* Right: Property Image */}
+            <div className="relative rounded-2xl aspect-[4/3] overflow-hidden">
+              <Image
+                src="/images/cabin-exterior-aerial-driveway.jpg"
+                alt="Sunrise Summit mountain cabin aerial view"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
           </div>
         </Section>

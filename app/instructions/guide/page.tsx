@@ -125,7 +125,7 @@ export default function HouseGuidePage() {
         <Hero
           title="House Guide"
           subtitle="Learn how to use all the amenities and features of Sunrise Summit"
-          imageSrc="/images/hero.png"
+          imageSrc="/images/living-room-stone-fireplace-tv.jpeg"
         />
 
         {/* Quick Navigation */}

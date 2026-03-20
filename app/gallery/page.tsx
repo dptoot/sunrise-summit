@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import Image from 'next/image';
 import { Header, Footer, Hero, Section } from '@/components';
 
 // Gallery image type
@@ -8,29 +9,64 @@ interface GalleryImage {
   id: number;
   src: string;
   alt: string;
-  category: 'Exterior' | 'Living Spaces' | 'Bedrooms' | 'Views' | 'Amenities';
+  category: 'Exterior' | 'Living Spaces' | 'Bedrooms' | 'Bathrooms' | 'Views' | 'Amenities';
 }
 
-// Placeholder gallery data with categories
 const galleryImages: GalleryImage[] = [
-  { id: 1, src: '/images/gallery/exterior-1.jpg', alt: 'Cabin exterior front view', category: 'Exterior' },
-  { id: 2, src: '/images/gallery/exterior-2.jpg', alt: 'Cabin exterior with mountain backdrop', category: 'Exterior' },
-  { id: 3, src: '/images/gallery/living-1.jpg', alt: 'Open living room with fireplace', category: 'Living Spaces' },
-  { id: 4, src: '/images/gallery/living-2.jpg', alt: 'Kitchen and dining area', category: 'Living Spaces' },
-  { id: 5, src: '/images/gallery/living-3.jpg', alt: 'Cozy seating area', category: 'Living Spaces' },
-  { id: 6, src: '/images/gallery/bedroom-1.jpg', alt: 'Master bedroom with king bed', category: 'Bedrooms' },
-  { id: 7, src: '/images/gallery/bedroom-2.jpg', alt: 'Guest bedroom with queen bed', category: 'Bedrooms' },
-  { id: 8, src: '/images/gallery/bedroom-3.jpg', alt: 'Bunk room for kids', category: 'Bedrooms' },
-  { id: 9, src: '/images/gallery/view-1.jpg', alt: 'Sunrise over the mountains', category: 'Views' },
-  { id: 10, src: '/images/gallery/view-2.jpg', alt: 'Deck view at sunset', category: 'Views' },
-  { id: 11, src: '/images/gallery/view-3.jpg', alt: 'Winter wonderland scenery', category: 'Views' },
-  { id: 12, src: '/images/gallery/amenity-1.jpg', alt: 'Hot tub on the deck', category: 'Amenities' },
-  { id: 13, src: '/images/gallery/amenity-2.jpg', alt: 'Game room with pool table', category: 'Amenities' },
-  { id: 14, src: '/images/gallery/amenity-3.jpg', alt: 'Fire pit area', category: 'Amenities' },
-  { id: 15, src: '/images/gallery/exterior-3.jpg', alt: 'Driveway and parking area', category: 'Exterior' },
+  // Exterior
+  { id: 1, src: '/images/cabin-exterior-aerial-driveway.jpg', alt: 'Mountain cabin aerial view with stone facade and driveway', category: 'Exterior' },
+  { id: 2, src: '/images/cabin-deck-mountain-vista.jpg', alt: 'Cabin deck overlooking mountain range', category: 'Exterior' },
+  { id: 3, src: '/images/front-porch-yellow-door-garden.jpg', alt: 'Covered front porch with yellow door and garden', category: 'Exterior' },
+  { id: 4, src: '/images/mountain-valley-aerial-panorama.jpg', alt: 'Aerial panoramic view of Smoky Mountain valley', category: 'Exterior' },
+
+  // Living Spaces
+  { id: 5, src: '/images/living-room-teal-wall-leather-sofas.jpeg', alt: 'Open living room with teal accent wall and leather sofas', category: 'Living Spaces' },
+  { id: 6, src: '/images/living-room-stone-fireplace-tv.jpeg', alt: 'Cozy living room with stone fireplace and mounted TV', category: 'Living Spaces' },
+  { id: 7, src: '/images/dining-room-blue-walls-table-set.jpeg', alt: 'Formal dining room with blue walls set for six', category: 'Living Spaces' },
+  { id: 8, src: '/images/dining-room-table-set-wide-view.jpeg', alt: 'Dining room wide view with table set and forest views', category: 'Living Spaces' },
+  { id: 9, src: '/images/dining-nook-sunset-window-view.jpeg', alt: 'Dining nook with stunning sunset through windows', category: 'Living Spaces' },
+  { id: 10, src: '/images/kitchen-nook-mountain-panorama.jpeg', alt: 'Kitchen eating area with panoramic mountain view', category: 'Living Spaces' },
+  { id: 11, src: '/images/breakfast-nook-teal-walls.jpeg', alt: 'Breakfast nook with teal walls and round table', category: 'Living Spaces' },
+  { id: 12, src: '/images/lower-lounge-green-velvet-armchairs.jpeg', alt: 'Lower level lounge with green velvet armchairs', category: 'Living Spaces' },
+  { id: 13, src: '/images/coffee-station-keurig-kettle.jpeg', alt: 'Coffee station with Keurig, drip maker, and electric kettle', category: 'Living Spaces' },
+
+  // Bedrooms
+  { id: 14, src: '/images/master-bedroom-king-bed-orange-accents.jpeg', alt: 'Master bedroom with king bed and orange accents', category: 'Bedrooms' },
+  { id: 15, src: '/images/master-bedroom-craftsman-bed-wide.jpeg', alt: 'Master bedroom wide view with craftsman-style bed', category: 'Bedrooms' },
+  { id: 16, src: '/images/master-bedroom-orange-curtains-fan.jpeg', alt: 'Master bedroom with orange curtains and ceiling fan', category: 'Bedrooms' },
+  { id: 17, src: '/images/bedside-closeup-orange-pillows-lamp.jpeg', alt: 'Bedside detail with orange pillows, lamp, and fresh flowers', category: 'Bedrooms' },
+  { id: 18, src: '/images/attic-twin-bedroom-green-walls.jpeg', alt: 'Cozy attic bedroom with twin beds and green walls', category: 'Bedrooms' },
+  { id: 19, src: '/images/navy-bedroom-queen-bed.jpeg', alt: 'Guest bedroom with navy accent wall and queen bed', category: 'Bedrooms' },
+  { id: 20, src: '/images/spacious-bedroom-navy-wall-loveseat.jpeg', alt: 'Spacious bedroom with navy wall and yellow loveseat', category: 'Bedrooms' },
+
+  // Bathrooms
+  { id: 21, src: '/images/main-bathroom-blue-double-vanity.jpeg', alt: 'Main bathroom with blue walls and double vanity', category: 'Bathrooms' },
+  { id: 22, src: '/images/bathroom-rustic-vanity-vessel-sink.jpeg', alt: 'Bathroom with rustic vanity and vessel sink', category: 'Bathrooms' },
+  { id: 23, src: '/images/half-bath-floral-wallpaper.jpeg', alt: 'Half bath with floral wallpaper and dark wainscoting', category: 'Bathrooms' },
+
+  // Views
+  { id: 24, src: '/images/deck-sunset-view-telescope.jpeg', alt: 'Mountain sunset from deck with telescope', category: 'Views' },
+  { id: 25, src: '/images/balcony-vivid-sunset-mountains.jpeg', alt: 'Vivid sunset from balcony over mountain ridges', category: 'Views' },
+  { id: 26, src: '/images/deck-adirondack-chairs-starry-sky.jpeg', alt: 'Deck with Adirondack chairs under the Milky Way', category: 'Views' },
+  { id: 27, src: '/images/deck-fire-pit-twilight-mountain-view.jpeg', alt: 'Fire pit at twilight with mountain vista', category: 'Views' },
+
+  // Amenities
+  { id: 28, src: '/images/indoor-hot-tub-cedar-room.jpeg', alt: 'Indoor hot tub in cedar-paneled room with fireplace', category: 'Amenities' },
+  { id: 29, src: '/images/game-room-poker-table-stone-wall.jpeg', alt: 'Game room with poker table and stone wall fireplace', category: 'Amenities' },
+  { id: 30, src: '/images/stone-fireplace-lounge-armchairs.jpeg', alt: 'Stone fireplace lounge with armchairs', category: 'Amenities' },
+  { id: 31, src: '/images/poker-room-stone-walls-wide.jpeg', alt: 'Poker room wide view with stone walls', category: 'Amenities' },
+  { id: 32, src: '/images/pub-room-poker-table-stone-walls.jpeg', alt: 'Pub room with poker table and stone accents', category: 'Amenities' },
+  { id: 33, src: '/images/stone-lounge-green-chairs-cedar-ceiling.jpeg', alt: 'Stone wall lounge with green chairs and cedar ceiling', category: 'Amenities' },
+  { id: 34, src: '/images/entertainment-room-tv-led-lights.jpeg', alt: 'Entertainment room with large TV and LED accent lights', category: 'Amenities' },
+  { id: 35, src: '/images/gaming-console-collection-closeup.jpeg', alt: 'Gaming console collection with Nintendo Switch and Xbox', category: 'Amenities' },
+  { id: 36, src: '/images/recreation-room-foosball-bookshelf.jpeg', alt: 'Recreation room with foosball table and bookshelf', category: 'Amenities' },
+  { id: 37, src: '/images/recreation-room-staircase-wide.jpeg', alt: 'Recreation room wide view with staircase and games', category: 'Amenities' },
+  { id: 38, src: '/images/scrabble-board-game-table.jpeg', alt: 'Scrabble board game on glass table', category: 'Amenities' },
+  { id: 39, src: '/images/basement-lounge-sectional-colorful-art.jpeg', alt: 'Basement lounge with sectional sofa and colorful art', category: 'Amenities' },
+  { id: 40, src: '/images/arcade-pacman-cabinet-lounge.jpeg', alt: 'Pac-Man arcade cabinet in lounge area', category: 'Amenities' },
 ];
 
-const categories = ['All', 'Exterior', 'Living Spaces', 'Bedrooms', 'Views', 'Amenities'] as const;
+const categories = ['All', 'Exterior', 'Living Spaces', 'Bedrooms', 'Bathrooms', 'Views', 'Amenities'] as const;
 type Category = typeof categories[number];
 
 // Lightbox Component
@@ -126,16 +162,17 @@ function Lightbox({ images, currentIndex, isOpen, onClose, onPrevious, onNext }:
       </button>
 
       {/* Image content area */}
-      <div className="relative z-10 max-w-4xl max-h-[80vh] mx-4">
-        {/* Placeholder box representing the image */}
-        <div className="aspect-video bg-mountain/30 rounded-lg flex flex-col items-center justify-center min-w-[300px] sm:min-w-[500px] md:min-w-[700px]">
-          <span className="text-cream text-xl font-semibold mb-2">{currentImage.category}</span>
-          <span className="text-cream/80 text-sm">{currentImage.alt}</span>
-        </div>
+      <div className="relative z-10 flex items-center justify-center mx-4">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={currentImage.src}
+          alt={currentImage.alt}
+          className="rounded-lg max-h-[80vh] max-w-[90vw] object-contain"
+        />
 
-        {/* Image counter */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-navy/70 text-cream px-4 py-2 rounded-full text-sm">
-          {currentIndex + 1} / {images.length}
+        {/* Image counter and caption */}
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-navy/70 text-cream px-4 py-2 rounded-full text-sm whitespace-nowrap">
+          {currentIndex + 1} / {images.length} &mdash; {currentImage.alt}
         </div>
       </div>
     </div>
@@ -152,14 +189,16 @@ function GalleryCard({ image, onClick }: GalleryCardProps) {
   return (
     <button
       onClick={onClick}
-      className="group relative aspect-video bg-mountain/20 rounded-lg overflow-hidden cursor-pointer focus:outline-none focus:ring-2 focus:ring-coral focus:ring-offset-2 transition-all hover:shadow-lg"
+      className="group relative aspect-video rounded-lg overflow-hidden cursor-pointer focus:outline-none focus:ring-2 focus:ring-coral focus:ring-offset-2 transition-all hover:shadow-lg"
       aria-label={`View ${image.alt}`}
     >
-      {/* Placeholder content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
-        <span className="text-navy font-semibold text-lg mb-1">{image.category}</span>
-        <span className="text-mountain text-sm">{image.alt}</span>
-      </div>
+      <Image
+        src={image.src}
+        alt={image.alt}
+        fill
+        className="object-cover group-hover:scale-105 transition-transform duration-300"
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+      />
 
       {/* Hover overlay */}
       <div className="absolute inset-0 bg-navy/0 group-hover:bg-navy/20 transition-colors flex items-center justify-center">
@@ -216,7 +255,7 @@ export default function GalleryPage() {
         <Hero
           title="Photo Gallery"
           subtitle="Take a tour of Sunrise Summit"
-          imageSrc="/images/hero.png"
+          imageSrc="/images/deck-adirondack-chairs-starry-sky.jpeg"
         />
 
         <Section variant="cream">

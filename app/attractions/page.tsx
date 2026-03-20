@@ -223,7 +223,7 @@ export default function AttractionsPage() {
         <Hero
           title="Local Attractions"
           subtitle="Discover the best of Western North Carolina"
-          imageSrc="/images/hero.png"
+          imageSrc="/images/mountain-valley-aerial-panorama.jpg"
         />
 
         {/* Outdoor Activities */}

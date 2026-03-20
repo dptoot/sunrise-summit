@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Header, Footer, Hero, Section, AmenityCard } from '@/components';
 
@@ -35,6 +36,15 @@ const amenities = [
     title: 'Mid-Century Modern Comfort',
     description: 'Thoughtfully designed spaces blending retro charm with modern amenities.',
   },
+];
+
+const showcaseImages = [
+  { src: '/images/cabin-exterior-aerial-driveway.jpg', alt: 'Mountain cabin aerial view with driveway' },
+  { src: '/images/living-room-stone-fireplace-tv.jpeg', alt: 'Living room with stone fireplace' },
+  { src: '/images/master-bedroom-king-bed-orange-accents.jpeg', alt: 'Master bedroom with king bed' },
+  { src: '/images/deck-fire-pit-twilight-mountain-view.jpeg', alt: 'Deck fire pit at twilight with mountain view' },
+  { src: '/images/indoor-hot-tub-cedar-room.jpeg', alt: 'Indoor hot tub in cedar-paneled room' },
+  { src: '/images/balcony-vivid-sunset-mountains.jpeg', alt: 'Vivid sunset over mountain ridges' },
 ];
 
 const stats = [
@@ -98,11 +108,19 @@ export default function Home() {
             Glimpse of Paradise
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[...Array(6)].map((_, index) => (
+            {showcaseImages.map((image, index) => (
               <div
                 key={index}
-                className="aspect-video bg-mountain/20 rounded-lg"
-              />
+                className="relative aspect-video rounded-lg overflow-hidden group"
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+              </div>
             ))}
           </div>
           <div className="text-center mt-10">

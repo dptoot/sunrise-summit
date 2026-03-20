@@ -22,7 +22,7 @@ export default function CheckInPage() {
         <Hero
           title="Check-in & Check-out"
           subtitle="Step-by-step instructions for a smooth arrival and departure"
-          imageSrc="/images/hero.png"
+          imageSrc="/images/front-porch-yellow-door-garden.jpg"
         />
 
         {/* Before Arrival Section */}

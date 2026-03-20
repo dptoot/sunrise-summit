@@ -21,7 +21,7 @@ export default function SpaPage() {
         <Hero
           title="Indoor Hot Tub / Spa"
           subtitle="Everything you need for a relaxing soak"
-          imageSrc="/images/hero.png"
+          imageSrc="/images/indoor-hot-tub-cedar-room.jpeg"
         />
 
         <Section variant="cream">
