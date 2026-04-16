@@ -190,19 +190,6 @@ export default function CheckInPage() {
                     </svg>
                   </span>
                   <div>
-                    <p className="font-medium text-navy">Dishes</p>
-                    <p className="text-mountain text-sm">
-                      Please start the dishwasher with any dirty dishes.
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-6 h-6 bg-sand rounded flex items-center justify-center mt-0.5">
-                    <svg className="w-4 h-4 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </span>
-                  <div>
                     <p className="font-medium text-navy">Trash</p>
                     <p className="text-mountain text-sm">
                       Gather all trash and place it in the outdoor trash bins. Do not leave food waste inside.

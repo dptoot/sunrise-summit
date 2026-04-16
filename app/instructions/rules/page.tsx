@@ -38,7 +38,6 @@ const ruleSections: RuleSection[] = [
       'Quiet hours are from 9:00 PM to 8:00 AM.',
       'Keep noise levels to a minimum during quiet hours out of respect for neighbors.',
       'Outdoor activities and music should be brought inside after 9:00 PM.',
-      'Hot tub use is permitted during quiet hours but please keep conversations at low volume.',
     ],
   },
   {
@@ -80,7 +79,6 @@ const ruleSections: RuleSection[] = [
     icon: '✅',
     rules: [
       'Check-out time is 10:00 AM.',
-      'Start the dishwasher.',
       'Take out all trash to the outdoor bins.',
       'Leave used towels on the tile floor of the main bathroom or near the laundry room.',
       'Turn off all lights, fans, and electronics.',
