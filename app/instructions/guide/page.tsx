@@ -30,7 +30,7 @@ const guideSections: GuideSection[] = [
     icon: '📶',
     instructions: [
       'Network name: SunriseSummit_GUEST',
-      'Password: Sunrise@SmokeyMountains',
+      'Password: Sunrise@SmokyMountains',
       'Coverage: WiFi reaches all areas of the cabin including the deck',
       'Speed: Suitable for streaming and video calls',
     ],
@@ -226,7 +226,7 @@ export default function HouseGuidePage() {
                     <div className="flex-shrink-0 flex justify-center">
                       <WiFiQRCode
                         ssid="SunriseSummit_GUEST"
-                        password="Sunrise@SmokeyMountains"
+                        password="Sunrise@SmokyMountains"
                       />
                     </div>
                   )}

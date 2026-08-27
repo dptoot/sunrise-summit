@@ -247,7 +247,7 @@ export default function AttractionsPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-navy text-center mb-4">
             Downtown Waynesville
           </h2>
-          <p className="text-coral font-medium text-center mb-8">20-25 min drive</p>
+          <p className="text-coral font-medium text-center mb-8">15 min drive from the mountain</p>
           <div className="max-w-3xl mx-auto">
             <div className="bg-cream border border-sand rounded-lg p-8">
               <p className="text-mountain text-lg leading-relaxed mb-6">
