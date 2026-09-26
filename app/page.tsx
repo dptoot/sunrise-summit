@@ -5,10 +5,10 @@ import { Header, Footer, Hero, Section, AmenityCard } from '@/components';
 
 export const metadata: Metadata = {
   title: 'Sunrise Summit | Mountain Cabin Rental in Waynesville, NC',
-  description: 'Experience breathtaking mountain views at Sunrise Summit, a 4-bedroom mid-century modern cabin rental in Waynesville, NC. Indoor hot tub, game rooms, and panoramic Smoky Mountain views.',
+  description: 'Experience breathtaking mountain views at Sunrise Summit, a 4-bedroom mid-century mountain cabin rental in Waynesville, NC. Indoor hot tub, game rooms, and panoramic Smoky Mountain views.',
   openGraph: {
     title: 'Sunrise Summit | Mountain Cabin Rental in Waynesville, NC',
-    description: 'Experience breathtaking mountain views at Sunrise Summit, a 4-bedroom mid-century modern cabin rental in Waynesville, NC.',
+    description: 'Experience breathtaking mountain views at Sunrise Summit, a 4-bedroom mid-century mountain cabin rental in Waynesville, NC.',
     type: 'website',
     locale: 'en_US',
     siteName: 'Sunrise Summit',
@@ -33,7 +33,7 @@ const amenities = [
   },
   {
     icon: '🏠',
-    title: 'Mid-Century Modern Comfort',
+    title: 'Mid-Century Mountain Comfort',
     description: 'Thoughtfully designed spaces blending retro charm with modern amenities.',
   },
 ];
@@ -61,7 +61,7 @@ export default function Home() {
         {/* Hero Section */}
         <Hero
           title="Wake Up Above the Clouds"
-          subtitle="A mid-century modern retreat in the heart of the Smokies"
+          subtitle="A mid-century mountain retreat in the heart of the Smokies"
           ctaText="Explore the Property"
           ctaLink="/about"
           imageSrc="/images/hero.png"
