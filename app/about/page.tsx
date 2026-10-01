@@ -172,8 +172,8 @@ export default function AboutPage() {
                 />
                 <AmenityCard
                   icon="♨️"
-                  title="Indoor Hot Tub"
-                  description="Soak in the hot tub while enjoying the warmth of the adjacent fireplace year-round."
+                  title="Hot Tub"
+                  description="Soak in the hot tub under the open sky while taking in the mountain air."
                 />
               </div>
             </div>

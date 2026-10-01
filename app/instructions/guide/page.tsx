@@ -152,7 +152,7 @@ export default function HouseGuidePage() {
               <div className="flex items-center gap-4">
                 <span className="text-3xl">🛁</span>
                 <div>
-                  <h3 className="text-lg font-semibold text-navy group-hover:text-coral transition-colors">Indoor Hot Tub / Spa</h3>
+                  <h3 className="text-lg font-semibold text-navy group-hover:text-coral transition-colors">Hot Tub / Spa</h3>
                   <p className="text-mountain text-sm">Learn how to operate the jets and temperature controls, safety guidelines, recommended settings, and troubleshooting tips for the perfect soak</p>
                 </div>
               </div>
