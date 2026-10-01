@@ -17,7 +17,6 @@ export const metadata: Metadata = {
 interface GuideSection {
   id: string;
   title: string;
-  icon: string;
   instructions: string[];
   tips?: string;
   listStyle?: 'numbered' | 'bullets';
@@ -27,7 +26,6 @@ const guideSections: GuideSection[] = [
   {
     id: 'wifi',
     title: 'WiFi',
-    icon: '📶',
     instructions: [
       'Network name: SunriseSummit_GUEST',
       'Password: Sunrise@SmokyMountains',
@@ -39,14 +37,14 @@ const guideSections: GuideSection[] = [
   {
     id: 'kitchen',
     title: 'Kitchen Appliances',
-    icon: '🍳',
     instructions: [
-      'Coffee & Tea: Keurig, drip coffee maker, and electric kettle on the coffee bar. A starter set of K-cups, sugar, creamer, and tea selections provided. Just add mountain-fresh water!',
-      'Dishwasher: Great news — we have a brand new dishwasher! Load it up, add a detergent pod from under the sink, and press Start. It\'s that easy.',
+      'Coffee & Tea: Keurig, drip coffee maker, and electric kettle on the coffee bar. A starter set of K-cups, Starbucks coffee grounds, sugar, creamer, and tea selections provided. Just add mountain-fresh water!',
+      'Dishwasher: Dishwasher detergent is under the sink. Load it up, add detergent, and press Start.',
       'Oven: Preheat by pressing Bake, setting temperature, and pressing Start. The oven will beep when it\'s ready to go!',
       'Microwave: Mounted a bit lower than you might be used to — your shoulders will thank you! Perfectly safe and easy to reach.',
       'Refrigerator: Ice maker is in the freezer. The mountain tap water is as fresh as it gets, but a Brita filter dispenser is available for those who prefer it.',
-      'Cooking utensils, pots, pans, and basic spices are provided in the drawers and cabinets.',
+      'Small Appliances: A crockpot, blender, stand mixer, and waffle maker are available for you to use.',
+      'Cooking utensils, pots, and pans are provided in the drawers and cabinets, along with some spices.',
     ],
     tips: 'Water pressure may be slow at first, but the well pump kicks in after a few seconds. A hot water recirculator system gets that mountain-fresh water hot faster!',
     listStyle: 'bullets',
@@ -54,7 +52,6 @@ const guideSections: GuideSection[] = [
   {
     id: 'fireplaces',
     title: 'Fireplaces',
-    icon: '🔥',
     instructions: [
       'Status: The fireplaces are currently being replaced and should not be turned on.',
       'Since we\'re heading into the warm season, you won\'t need them — enjoy the mountain breeze instead!',
@@ -64,13 +61,12 @@ const guideSections: GuideSection[] = [
   {
     id: 'thermostat',
     title: 'Heating & Cooling',
-    icon: '🌡️',
     instructions: [
       'Baseboard Heaters: Each bedroom and zone has its own thermostat — adjust individually for your comfort.',
       'To Adjust: Use the up/down buttons on the digital display to set your desired temperature.',
       'Recommended Settings: 68-72°F for comfortable temperatures.',
       'Air Conditioning: There isn\'t any — but you won\'t miss it! At this altitude, summer nights are cool and breezy. Mother Nature handles the AC up here.',
-      'Fans: Each room has a ceiling fan with a remote for extra airflow.',
+      'Fans: Each room has a ceiling fan with a remote for extra airflow. Each bedroom also has a box fan.',
     ],
     tips: 'Mountain temperatures can swing 20-30 degrees between day and night, so you may want to adjust as the evening cools down.',
     listStyle: 'bullets',
@@ -78,7 +74,6 @@ const guideSections: GuideSection[] = [
   {
     id: 'locking-up',
     title: 'Locking Up',
-    icon: '🔐',
     instructions: [
       'Keypad Locks: The basement and front door have keypad enabled locks. From inside, just turn the latch. From outside, press the check mark button on the keypad.',
       'French Doors: For the main floor french doors, rotate the handle up first, then back down to allow you to correctly turn the deadbolt latch.',
@@ -89,27 +84,44 @@ const guideSections: GuideSection[] = [
   {
     id: 'entertainment',
     title: 'TV & Entertainment',
-    icon: '📺',
     instructions: [
-      'Smart TVs: Located in the living room, most bedrooms, poker room, and game room.',
+      'Smart TVs: Located in the living room, most bedrooms, and game room.',
       'Streaming: You can log into your own streaming accounts on the Smart TVs. Please remember to log out before you leave.',
       'Game Room: Equipped with Xbox and Nintendo Switch for everyone to enjoy. Controllers are in the cabinet below.',
     ],
-    tips: 'Board games and cards are available in the poker room closet for family fun.',
+    tips: 'Board games are available in the game room bookcase for family fun.',
     listStyle: 'bullets',
   },
   {
     id: 'laundry',
     title: 'Washer & Dryer',
-    icon: '🧺',
     instructions: [
-      'Location: Washer and dryer are in the basement at the foot of the stairs.',
-      'Brand New: Both the washer and dryer are brand new and work great!',
+      'Location: Washer and dryer are in the laundry room at the foot of the stairs.',
       'Washer: Add detergent to dispenser, select cycle, and press Start.',
       'Dryer: Clean the lint trap before each use. Select heat level and press Start.',
       'After Use: Please leave the washer door and detergent dispenser open after your last load — this prevents mold and mildew buildup.',
     ],
     tips: 'Please complete any laundry loads before check-out. Do not leave wet items in the washer.',
+    listStyle: 'bullets',
+  },
+  {
+    id: 'provided',
+    title: 'What We Provide',
+    instructions: [
+      'Bath: Shampoo, conditioner, body wash, and liquid hand soap.',
+      'Paper Goods: A starter set of toilet paper and paper towels.',
+      'Kitchen: Some spices are in the kitchen.',
+      'Little Ones: A pack n play is available for your use.',
+    ],
+    listStyle: 'bullets',
+  },
+  {
+    id: 'outdoors',
+    title: 'Outdoors',
+    instructions: [
+      'Walking Sticks: Walking sticks are in the hall coat closet and are available for you to use. When you return them, please clean off any mud or dirt.',
+      'Fire Pit: Please review the fire pit rules on our House Rules page before lighting a fire.',
+    ],
     listStyle: 'bullets',
   },
 ];
@@ -138,7 +150,6 @@ export default function HouseGuidePage() {
                   href={`#${section.id}`}
                   className="inline-flex items-center gap-2 px-4 py-2 bg-sand hover:bg-navy hover:text-cream rounded-full text-navy font-medium transition-colors"
                 >
-                  <span>{section.icon}</span>
                   <span>{section.title}</span>
                 </a>
               ))}
@@ -150,9 +161,8 @@ export default function HouseGuidePage() {
               className="mt-8 flex items-center justify-between gap-4 bg-white border-2 border-coral/30 rounded-xl p-5 hover:border-coral hover:shadow-md transition-all group"
             >
               <div className="flex items-center gap-4">
-                <span className="text-3xl">🛁</span>
                 <div>
-                  <h3 className="text-lg font-semibold text-navy group-hover:text-coral transition-colors">Indoor Hot Tub / Spa</h3>
+                  <h3 className="text-lg font-semibold text-navy group-hover:text-coral transition-colors">Hot Tub / Spa</h3>
                   <p className="text-mountain text-sm">Learn how to operate the jets and temperature controls, safety guidelines, recommended settings, and troubleshooting tips for the perfect soak</p>
                 </div>
               </div>
@@ -178,7 +188,6 @@ export default function HouseGuidePage() {
           <Section key={section.id} variant={index % 2 === 0 ? 'cream' : 'white'}>
             <div id={section.id} className="max-w-4xl mx-auto scroll-mt-20">
               <div className="flex items-center gap-4 mb-6">
-                <span className="text-4xl">{section.icon}</span>
                 <h2 className="text-2xl md:text-3xl font-bold text-navy">
                   {section.title}
                 </h2>

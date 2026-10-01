@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Header, Footer, Hero, Section } from '@/components';
 
@@ -16,19 +17,19 @@ export const metadata: Metadata = {
 
 const instructionCards = [
   {
-    icon: '🔑',
+    imageSrc: '/images/front-porch-yellow-door-garden.jpg',
     title: 'Check-in & Check-out',
     description: 'Everything you need to know about arriving and departing from Sunrise Summit.',
     href: '/instructions/check-in',
   },
   {
-    icon: '📖',
+    imageSrc: '/images/living-room-stone-fireplace-tv.jpeg',
     title: 'House Guide',
     description: 'Learn how to use all the amenities and features of our mountain retreat.',
     href: '/instructions/guide',
   },
   {
-    icon: '📋',
+    imageSrc: '/images/cabin-deck-mountain-vista.jpg',
     title: 'House Rules',
     description: 'Guidelines to ensure a comfortable stay for you and future guests.',
     href: '/instructions/rules',
@@ -54,7 +55,15 @@ export default function InstructionsPage() {
                 href={card.href}
                 className="group bg-white border-2 border-sand rounded-xl p-6 md:p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
               >
-                <div className="text-5xl mb-4">{card.icon}</div>
+                <div className="relative aspect-video rounded-lg overflow-hidden mb-4">
+                  <Image
+                    src={card.imageSrc}
+                    alt=""
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
                 <h2 className="text-xl md:text-2xl font-bold text-navy mb-3 group-hover:text-mountain transition-colors">
                   {card.title}
                 </h2>

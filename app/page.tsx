@@ -5,10 +5,10 @@ import { Header, Footer, Hero, Section, AmenityCard } from '@/components';
 
 export const metadata: Metadata = {
   title: 'Sunrise Summit | Mountain Cabin Rental in Waynesville, NC',
-  description: 'Experience breathtaking mountain views at Sunrise Summit, a 4-bedroom mid-century modern cabin rental in Waynesville, NC. Indoor hot tub, game rooms, and panoramic Smoky Mountain views.',
+  description: 'Experience breathtaking mountain views at Sunrise Summit, a 4-bedroom mid-century mountain cabin rental in Waynesville, NC. Hot tub, game rooms, and panoramic Smoky Mountain views.',
   openGraph: {
     title: 'Sunrise Summit | Mountain Cabin Rental in Waynesville, NC',
-    description: 'Experience breathtaking mountain views at Sunrise Summit, a 4-bedroom mid-century modern cabin rental in Waynesville, NC.',
+    description: 'Experience breathtaking mountain views at Sunrise Summit, a 4-bedroom mid-century mountain cabin rental in Waynesville, NC.',
     type: 'website',
     locale: 'en_US',
     siteName: 'Sunrise Summit',
@@ -17,23 +17,23 @@ export const metadata: Metadata = {
 
 const amenities = [
   {
-    icon: '🛁',
-    title: 'Indoor Hot Tub with Fireplace',
-    description: 'Unwind in our luxurious indoor hot tub while enjoying the warmth of a crackling fireplace.',
+    imageSrc: '/images/hot-tub-deck-dusk-blue-lights.jpeg',
+    title: 'Hot Tub with a View',
+    description: 'Unwind in our hot tub under the open sky and take in the mountain air.',
   },
   {
-    icon: '🌅',
+    imageSrc: '/images/valley-clouds-sunrise-sun.jpeg',
     title: 'Breathtaking Sunrise Views',
     description: 'Wake up to stunning panoramic views of the sun rising above the mountain peaks.',
   },
   {
-    icon: '🎮',
+    imageSrc: '/images/recreation-room-foosball-bookshelf.jpeg',
     title: 'Game Rooms for All Ages',
     description: 'Entertainment for everyone with arcade games, board games, and more.',
   },
   {
-    icon: '🏠',
-    title: 'Mid-Century Modern Comfort',
+    imageSrc: '/images/living-room-teal-wall-leather-sofas.jpeg',
+    title: 'Mid-Century Mountain Comfort',
     description: 'Thoughtfully designed spaces blending retro charm with modern amenities.',
   },
 ];
@@ -43,7 +43,7 @@ const showcaseImages = [
   { src: '/images/living-room-stone-fireplace-tv.jpeg', alt: 'Living room with stone fireplace' },
   { src: '/images/master-bedroom-king-bed-orange-accents.jpeg', alt: 'Master bedroom with king bed' },
   { src: '/images/deck-fire-pit-twilight-mountain-view.jpeg', alt: 'Deck fire pit at twilight with mountain view' },
-  { src: '/images/indoor-hot-tub-cedar-room.jpeg', alt: 'Indoor hot tub in cedar-paneled room' },
+  { src: '/images/hot-tub-sunset-trees.jpeg', alt: 'Hot tub on the deck framed by trees' },
   { src: '/images/balcony-vivid-sunset-mountains.jpeg', alt: 'Vivid sunset over mountain ridges' },
 ];
 
@@ -61,10 +61,10 @@ export default function Home() {
         {/* Hero Section */}
         <Hero
           title="Wake Up Above the Clouds"
-          subtitle="A mid-century modern retreat in the heart of the Smokies"
+          subtitle="A mid-century mountain retreat in the heart of the Smokies"
           ctaText="Explore the Property"
           ctaLink="/about"
-          imageSrc="/images/hero.png"
+          imageSrc="/images/hero-valley-clouds-sunrise.jpeg"
         />
 
         {/* Quick Stats Bar */}
@@ -94,7 +94,7 @@ export default function Home() {
             {amenities.map((amenity) => (
               <AmenityCard
                 key={amenity.title}
-                icon={amenity.icon}
+                imageSrc={amenity.imageSrc}
                 title={amenity.title}
                 description={amenity.description}
               />

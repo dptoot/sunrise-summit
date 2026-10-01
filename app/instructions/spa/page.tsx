@@ -3,10 +3,10 @@ import { Header, Footer, Hero, Section, HotTubGuide } from '@/components';
 
 export const metadata: Metadata = {
   title: 'Hot Tub / Spa Instructions | Sunrise Summit',
-  description: 'Complete guide to using the indoor hot tub at Sunrise Summit. Safety guidelines, controls, temperature settings, and troubleshooting.',
+  description: 'Complete guide to using the hot tub at Sunrise Summit. Safety guidelines, controls, temperature settings, and troubleshooting.',
   openGraph: {
     title: 'Hot Tub / Spa Instructions | Sunrise Summit',
-    description: 'Complete guide to using the indoor hot tub at Sunrise Summit cabin rental.',
+    description: 'Complete guide to using the hot tub at Sunrise Summit cabin rental.',
     type: 'website',
     locale: 'en_US',
     siteName: 'Sunrise Summit',
@@ -19,9 +19,9 @@ export default function SpaPage() {
       <Header />
       <main className="animate-fade-in">
         <Hero
-          title="Indoor Hot Tub / Spa"
+          title="Hot Tub / Spa"
           subtitle="Everything you need for a relaxing soak"
-          imageSrc="/images/indoor-hot-tub-cedar-room.jpeg"
+          imageSrc="/images/hot-tub-deck-dusk-blue-lights.jpeg"
         />
 
         <Section variant="cream">
