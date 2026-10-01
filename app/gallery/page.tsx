@@ -252,11 +252,12 @@ export default function GalleryPage() {
     setCurrentImageIndex((prev) => (prev === filteredImages.length - 1 ? 0 : prev + 1));
   }, [filteredImages.length]);
 
-  // Reset lightbox index when category changes
-  useEffect(() => {
+  // Change category and reset lightbox state in the same event
+  const selectCategory = useCallback((category: Category) => {
+    setSelectedCategory(category);
     setCurrentImageIndex(0);
     setLightboxOpen(false);
-  }, [selectedCategory]);
+  }, []);
 
   return (
     <>
@@ -276,7 +277,7 @@ export default function GalleryPage() {
               {categories.map((category) => (
                 <button
                   key={category}
-                  onClick={() => setSelectedCategory(category)}
+                  onClick={() => selectCategory(category)}
                   className={`px-4 py-2 rounded-full font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-coral focus:ring-offset-2 ${
                     selectedCategory === category
                       ? 'bg-coral text-white'
