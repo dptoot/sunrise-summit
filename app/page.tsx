@@ -43,7 +43,7 @@ const showcaseImages = [
   { src: '/images/living-room-stone-fireplace-tv.jpeg', alt: 'Living room with stone fireplace' },
   { src: '/images/master-bedroom-king-bed-orange-accents.jpeg', alt: 'Master bedroom with king bed' },
   { src: '/images/deck-fire-pit-twilight-mountain-view.jpeg', alt: 'Deck fire pit at twilight with mountain view' },
-  { src: '/images/indoor-hot-tub-cedar-room.jpeg', alt: 'Indoor hot tub in cedar-paneled room' },
+  { src: '/images/hot-tub-deck-dusk-blue-lights.jpeg', alt: 'Hot tub glowing blue at dusk beside the deck' },
   { src: '/images/balcony-vivid-sunset-mountains.jpeg', alt: 'Vivid sunset over mountain ridges' },
 ];
 
@@ -64,7 +64,7 @@ export default function Home() {
           subtitle="A mid-century modern retreat in the heart of the Smokies"
           ctaText="Explore the Property"
           ctaLink="/about"
-          imageSrc="/images/hero.png"
+          imageSrc="/images/hero-valley-clouds-sunrise.jpeg"
         />
 
         {/* Quick Stats Bar */}

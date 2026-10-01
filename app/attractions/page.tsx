@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { Header, Footer, Hero, Section } from '@/components';
 
 export const metadata: Metadata = {
@@ -249,6 +250,15 @@ export default function AttractionsPage() {
           </h2>
           <p className="text-coral font-medium text-center mb-8">15 min drive from the mountain</p>
           <div className="max-w-3xl mx-auto">
+            <div className="relative aspect-[4/3] rounded-lg overflow-hidden mb-6">
+              <Image
+                src="/images/waynesville-gateway-arch.jpeg"
+                alt="Waynesville Gateway to the Great Smoky Mountains arch over Main Street"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 768px"
+              />
+            </div>
             <div className="bg-cream border border-sand rounded-lg p-8">
               <p className="text-mountain text-lg leading-relaxed mb-6">
                 Our charming hometown offers a vibrant Main Street experience with something for everyone.
