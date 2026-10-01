@@ -15,14 +15,12 @@ export const metadata: Metadata = {
 
 interface RuleSection {
   title: string;
-  icon: string;
   rules: string[];
 }
 
 const ruleSections: RuleSection[] = [
   {
     title: 'General Rules',
-    icon: '📌',
     rules: [
       'Maximum occupancy is 8 guests. Only registered guests are permitted to stay overnight.',
       'Please treat the property with respect as if it were your own home.',
@@ -33,7 +31,6 @@ const ruleSections: RuleSection[] = [
   },
   {
     title: 'Quiet Hours',
-    icon: '🌙',
     rules: [
       'Quiet hours are from 9:00 PM to 8:00 AM.',
       'Keep noise levels to a minimum during quiet hours out of respect for neighbors.',
@@ -42,7 +39,6 @@ const ruleSections: RuleSection[] = [
   },
   {
     title: 'Parking',
-    icon: '🚗',
     rules: [
       'Park only in the driveway.',
       'Maximum of 4 vehicles allowed on the property.',
@@ -53,7 +49,6 @@ const ruleSections: RuleSection[] = [
   },
   {
     title: 'Smoking Policy',
-    icon: '🚭',
     rules: [
       'Smoking is strictly prohibited anywhere on the property, both inside and outside.',
       'This includes cigarettes, cigars, vapes, and any other smoking materials.',
@@ -62,14 +57,12 @@ const ruleSections: RuleSection[] = [
   },
   {
     title: 'Pet Policy',
-    icon: '🐾',
     rules: [
       'No pets allowed.',
     ],
   },
   {
     title: 'Fire Pit',
-    icon: '🔥',
     rules: [
       'Firewood is not guaranteed and depends on what is left from previous guests.',
       'Please do not overfill the fire pit with wood.',
@@ -79,14 +72,12 @@ const ruleSections: RuleSection[] = [
   },
   {
     title: 'Hot Tub / Spa',
-    icon: '🛁',
     rules: [
       'Please see our dedicated spa instructions page for full rules, operating instructions, and safety guidelines: /instructions/spa',
     ],
   },
   {
     title: 'Check-out Reminders',
-    icon: '✅',
     rules: [
       'Check-out time is 10:00 AM.',
       'Take out all trash to the outdoor bins.',
@@ -126,7 +117,6 @@ export default function HouseRulesPage() {
           <Section key={section.title} variant={index % 2 === 0 ? 'cream' : 'white'}>
             <div className="max-w-4xl mx-auto">
               <div className="flex items-center gap-4 mb-6">
-                <span className="text-4xl">{section.icon}</span>
                 <h2 className="text-2xl md:text-3xl font-bold text-navy">
                   {section.title}
                 </h2>

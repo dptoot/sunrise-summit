@@ -17,7 +17,6 @@ export const metadata: Metadata = {
 interface GuideSection {
   id: string;
   title: string;
-  icon: string;
   instructions: string[];
   tips?: string;
   listStyle?: 'numbered' | 'bullets';
@@ -27,7 +26,6 @@ const guideSections: GuideSection[] = [
   {
     id: 'wifi',
     title: 'WiFi',
-    icon: '📶',
     instructions: [
       'Network name: SunriseSummit_GUEST',
       'Password: Sunrise@SmokyMountains',
@@ -39,7 +37,6 @@ const guideSections: GuideSection[] = [
   {
     id: 'kitchen',
     title: 'Kitchen Appliances',
-    icon: '🍳',
     instructions: [
       'Coffee & Tea: Keurig, drip coffee maker, and electric kettle on the coffee bar. A starter set of K-cups, Starbucks coffee grounds, sugar, creamer, and tea selections provided. Just add mountain-fresh water!',
       'Dishwasher: Dishwasher detergent is under the sink. Load it up, add detergent, and press Start.',
@@ -55,7 +52,6 @@ const guideSections: GuideSection[] = [
   {
     id: 'fireplaces',
     title: 'Fireplaces',
-    icon: '🔥',
     instructions: [
       'Status: The fireplaces are currently being replaced and should not be turned on.',
       'Since we\'re heading into the warm season, you won\'t need them — enjoy the mountain breeze instead!',
@@ -65,7 +61,6 @@ const guideSections: GuideSection[] = [
   {
     id: 'thermostat',
     title: 'Heating & Cooling',
-    icon: '🌡️',
     instructions: [
       'Baseboard Heaters: Each bedroom and zone has its own thermostat — adjust individually for your comfort.',
       'To Adjust: Use the up/down buttons on the digital display to set your desired temperature.',
@@ -79,7 +74,6 @@ const guideSections: GuideSection[] = [
   {
     id: 'locking-up',
     title: 'Locking Up',
-    icon: '🔐',
     instructions: [
       'Keypad Locks: The basement and front door have keypad enabled locks. From inside, just turn the latch. From outside, press the check mark button on the keypad.',
       'French Doors: For the main floor french doors, rotate the handle up first, then back down to allow you to correctly turn the deadbolt latch.',
@@ -90,7 +84,6 @@ const guideSections: GuideSection[] = [
   {
     id: 'entertainment',
     title: 'TV & Entertainment',
-    icon: '📺',
     instructions: [
       'Smart TVs: Located in the living room, most bedrooms, and game room.',
       'Streaming: You can log into your own streaming accounts on the Smart TVs. Please remember to log out before you leave.',
@@ -102,7 +95,6 @@ const guideSections: GuideSection[] = [
   {
     id: 'laundry',
     title: 'Washer & Dryer',
-    icon: '🧺',
     instructions: [
       'Location: Washer and dryer are in the laundry room at the foot of the stairs.',
       'Washer: Add detergent to dispenser, select cycle, and press Start.',
@@ -115,7 +107,6 @@ const guideSections: GuideSection[] = [
   {
     id: 'provided',
     title: 'What We Provide',
-    icon: '🧴',
     instructions: [
       'Bath: Shampoo, conditioner, body wash, and liquid hand soap.',
       'Paper Goods: A starter set of toilet paper and paper towels.',
@@ -127,7 +118,6 @@ const guideSections: GuideSection[] = [
   {
     id: 'outdoors',
     title: 'Outdoors',
-    icon: '🥾',
     instructions: [
       'Walking Sticks: Walking sticks are in the hall coat closet and are available for you to use. When you return them, please clean off any mud or dirt.',
       'Fire Pit: Please review the fire pit rules on our House Rules page before lighting a fire.',
@@ -160,7 +150,6 @@ export default function HouseGuidePage() {
                   href={`#${section.id}`}
                   className="inline-flex items-center gap-2 px-4 py-2 bg-sand hover:bg-navy hover:text-cream rounded-full text-navy font-medium transition-colors"
                 >
-                  <span>{section.icon}</span>
                   <span>{section.title}</span>
                 </a>
               ))}
@@ -172,7 +161,6 @@ export default function HouseGuidePage() {
               className="mt-8 flex items-center justify-between gap-4 bg-white border-2 border-coral/30 rounded-xl p-5 hover:border-coral hover:shadow-md transition-all group"
             >
               <div className="flex items-center gap-4">
-                <span className="text-3xl">🛁</span>
                 <div>
                   <h3 className="text-lg font-semibold text-navy group-hover:text-coral transition-colors">Hot Tub / Spa</h3>
                   <p className="text-mountain text-sm">Learn how to operate the jets and temperature controls, safety guidelines, recommended settings, and troubleshooting tips for the perfect soak</p>
@@ -200,7 +188,6 @@ export default function HouseGuidePage() {
           <Section key={section.id} variant={index % 2 === 0 ? 'cream' : 'white'}>
             <div id={section.id} className="max-w-4xl mx-auto scroll-mt-20">
               <div className="flex items-center gap-4 mb-6">
-                <span className="text-4xl">{section.icon}</span>
                 <h2 className="text-2xl md:text-3xl font-bold text-navy">
                   {section.title}
                 </h2>

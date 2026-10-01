@@ -257,16 +257,8 @@ function TownCard({ town }: { town: NearbyTown }) {
 }
 
 function SeasonCard({ activity }: { activity: SeasonalActivity }) {
-  const seasonEmojis: Record<string, string> = {
-    Spring: '🌸',
-    Summer: '☀️',
-    Fall: '🍂',
-    Winter: '❄️',
-  };
-
   return (
     <div className="bg-white border border-sand rounded-lg p-6 hover:shadow-lg hover:border-coral/50 transition-all duration-300 h-full text-center">
-      <span className="text-4xl mb-4 block">{seasonEmojis[activity.season]}</span>
       <h3 className="text-lg font-semibold text-navy mb-2">{activity.season}</h3>
       <p className="text-mountain">{activity.activities}</p>
     </div>

@@ -89,17 +89,17 @@ export default function AboutPage() {
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <AmenityCard
-                  icon="🛏️"
+                  imageSrc="/images/master-bedroom-king-bed-orange-accents.jpeg"
                   title="4 Bedrooms"
                   description="Spacious and comfortable bedrooms, each designed for restful sleep after your mountain adventures."
                 />
                 <AmenityCard
-                  icon="🚿"
+                  imageSrc="/images/main-bathroom-blue-double-vanity.jpeg"
                   title="2 Full + 2 Half Baths"
                   description="Two full bathrooms and two half baths ensure plenty of space for everyone."
                 />
                 <AmenityCard
-                  icon="👨‍👩‍👧‍👦"
+                  imageSrc="/images/dining-room-table-set-wide-view.jpeg"
                   title="Sleeps 8"
                   description="Perfect for families or groups of friends looking to experience the mountains together."
                 />
@@ -113,17 +113,17 @@ export default function AboutPage() {
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <AmenityCard
-                  icon="🏠"
+                  imageSrc="/images/living-room-teal-wall-leather-sofas.jpeg"
                   title="Open Living Area"
                   description="A welcoming great room where everyone can gather, relax, and enjoy the stunning views."
                 />
                 <AmenityCard
-                  icon="🔥"
+                  imageSrc="/images/pub-room-stone-fireplace-poker-table.jpeg"
                   title="3 Fireplaces"
                   description="Cozy up by the fire on cool mountain evenings - one in the living room, one in the basement pub, and one in the hot tub room."
                 />
                 <AmenityCard
-                  icon="🍳"
+                  imageSrc="/images/kitchen-nook-mountain-panorama.jpeg"
                   title="Fully Equipped Kitchen"
                   description="Everything you need to prepare meals, from morning coffee to family dinners."
                 />
@@ -137,17 +137,17 @@ export default function AboutPage() {
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <AmenityCard
-                  icon="🃏"
+                  imageSrc="/images/poker-table-closeup-cards.jpeg"
                   title="Poker Room"
                   description="Gather around the poker table for cards and good conversation."
                 />
                 <AmenityCard
-                  icon="🎮"
+                  imageSrc="/images/gaming-console-collection-closeup.jpeg"
                   title="Game Room"
                   description="Xbox, Nintendo Switch, board games, and more — fun for all ages."
                 />
                 <AmenityCard
-                  icon="📺"
+                  imageSrc="/images/entertainment-room-tv-led-lights.jpeg"
                   title="Smart TVs"
                   description="Stream your favorite shows and movies on smart TVs throughout the cabin."
                 />
@@ -161,17 +161,17 @@ export default function AboutPage() {
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <AmenityCard
-                  icon="🌄"
+                  imageSrc="/images/deck-grill-dining-table-mountain-view.jpeg"
                   title="Large Deck"
                   description="Expansive outdoor deck space with Adirondack chairs around the fire pit, perfect for morning coffee or evening stargazing."
                 />
                 <AmenityCard
-                  icon="🏔️"
+                  imageSrc="/images/deck-sunrise-over-clouds.jpeg"
                   title="Panoramic Views"
                   description="Stunning mountain vistas stretching across multiple ridges and valleys."
                 />
                 <AmenityCard
-                  icon="♨️"
+                  imageSrc="/images/hot-tub-deck-dusk-blue-lights.jpeg"
                   title="Hot Tub"
                   description="Soak in the hot tub under the open sky while taking in the mountain air."
                 />

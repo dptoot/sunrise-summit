@@ -57,7 +57,7 @@ const galleryImages: GalleryImage[] = [
 
   // Amenities
   { id: 28, src: '/images/hot-tub-deck-dusk-blue-lights.jpeg', alt: 'Hot tub glowing blue at dusk beside the deck', category: 'Amenities' },
-  { id: 46, src: '/images/hot-tub-sunset-trees.jpeg', alt: 'Hot tub at sunset framed by trees', category: 'Amenities' },
+  { id: 46, src: '/images/hot-tub-sunset-trees.jpeg', alt: 'Hot tub on the deck framed by trees', category: 'Amenities' },
   { id: 47, src: '/images/deck-grill-dining-table-mountain-view.jpeg', alt: 'Deck with grill, dining table, and mountain view', category: 'Amenities' },
   { id: 48, src: '/images/pub-room-stone-fireplace-poker-table.jpeg', alt: 'Basement pub with stone fireplace and poker table', category: 'Amenities' },
   { id: 49, src: '/images/pub-room-fireplace-ceiling-fan.jpeg', alt: 'Basement pub with stone fireplace and armchairs', category: 'Amenities' },
