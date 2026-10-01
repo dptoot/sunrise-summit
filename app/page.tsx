@@ -17,22 +17,22 @@ export const metadata: Metadata = {
 
 const amenities = [
   {
-    icon: '🛁',
+    imageSrc: '/images/hot-tub-deck-dusk-blue-lights.jpeg',
     title: 'Hot Tub with a View',
     description: 'Unwind in our hot tub under the open sky and take in the mountain air.',
   },
   {
-    icon: '🌅',
+    imageSrc: '/images/valley-clouds-sunrise-sun.jpeg',
     title: 'Breathtaking Sunrise Views',
     description: 'Wake up to stunning panoramic views of the sun rising above the mountain peaks.',
   },
   {
-    icon: '🎮',
+    imageSrc: '/images/recreation-room-foosball-bookshelf.jpeg',
     title: 'Game Rooms for All Ages',
     description: 'Entertainment for everyone with arcade games, board games, and more.',
   },
   {
-    icon: '🏠',
+    imageSrc: '/images/living-room-teal-wall-leather-sofas.jpeg',
     title: 'Mid-Century Mountain Comfort',
     description: 'Thoughtfully designed spaces blending retro charm with modern amenities.',
   },
@@ -43,7 +43,7 @@ const showcaseImages = [
   { src: '/images/living-room-stone-fireplace-tv.jpeg', alt: 'Living room with stone fireplace' },
   { src: '/images/master-bedroom-king-bed-orange-accents.jpeg', alt: 'Master bedroom with king bed' },
   { src: '/images/deck-fire-pit-twilight-mountain-view.jpeg', alt: 'Deck fire pit at twilight with mountain view' },
-  { src: '/images/hot-tub-deck-dusk-blue-lights.jpeg', alt: 'Hot tub glowing blue at dusk beside the deck' },
+  { src: '/images/hot-tub-sunset-trees.jpeg', alt: 'Hot tub on the deck framed by trees' },
   { src: '/images/balcony-vivid-sunset-mountains.jpeg', alt: 'Vivid sunset over mountain ridges' },
 ];
 
@@ -94,7 +94,7 @@ export default function Home() {
             {amenities.map((amenity) => (
               <AmenityCard
                 key={amenity.title}
-                icon={amenity.icon}
+                imageSrc={amenity.imageSrc}
                 title={amenity.title}
                 description={amenity.description}
               />
