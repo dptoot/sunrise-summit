@@ -19,7 +19,7 @@ const amenities = [
   {
     icon: '🛁',
     title: 'Hot Tub with a View',
-    description: 'Unwind in our hot tub under the open sky, with the mountains glowing at sunset.',
+    description: 'Unwind in our hot tub under the open sky and take in the mountain air.',
   },
   {
     icon: '🌅',
