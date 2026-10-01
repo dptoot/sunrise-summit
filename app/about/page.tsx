@@ -4,10 +4,10 @@ import { Header, Footer, Hero, Section, AmenityCard } from '@/components';
 
 export const metadata: Metadata = {
   title: 'About Sunrise Summit | 4BR Mountain Cabin',
-  description: 'Discover Sunrise Summit, a thoughtfully designed 4-bedroom mid-century modern cabin perched on Heaths Peak in Waynesville, NC. Sleeps 8 with stunning panoramic mountain views.',
+  description: 'Discover Sunrise Summit, a thoughtfully designed 4-bedroom mid-century mountain cabin perched on Heaths Peak in Waynesville, NC. Sleeps 8 with stunning panoramic mountain views.',
   openGraph: {
     title: 'About Sunrise Summit | 4BR Mountain Cabin',
-    description: 'Discover Sunrise Summit, a thoughtfully designed 4-bedroom mid-century modern cabin perched on Heaths Peak in Waynesville, NC.',
+    description: 'Discover Sunrise Summit, a thoughtfully designed 4-bedroom mid-century mountain cabin perched on Heaths Peak in Waynesville, NC.',
     type: 'website',
     locale: 'en_US',
     siteName: 'Sunrise Summit',
@@ -42,7 +42,7 @@ export default function AboutPage() {
                   and amber.
                 </p>
                 <p>
-                  This thoughtfully designed mid-century modern cabin combines timeless
+                  This thoughtfully designed mid-century mountain cabin combines timeless
                   style with modern comfort. Clean lines, warm wood accents, and expansive
                   windows create a seamless connection between the cozy interior and the
                   stunning natural landscape beyond.
@@ -119,8 +119,8 @@ export default function AboutPage() {
                 />
                 <AmenityCard
                   icon="🔥"
-                  title="2 Fireplaces"
-                  description="Cozy up by the fire on cool mountain evenings - one in the living area and one by the hot tub."
+                  title="3 Fireplaces"
+                  description="Cozy up by the fire on cool mountain evenings - one in the living room, one in the basement pub, and one in the hot tub room."
                 />
                 <AmenityCard
                   icon="🍳"

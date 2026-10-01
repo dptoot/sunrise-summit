@@ -71,9 +71,8 @@ export default function CheckInPage() {
                       Parking Information
                     </h3>
                     <p className="text-mountain leading-relaxed">
-                      The driveway can accommodate up to 4 vehicles. Please park in the designated
-                      areas and avoid blocking the turnaround area. If you have a large
-                      vehicle or trailer, please contact us in advance.
+                      Please park in the driveway, which fits up to 4 vehicles. Avoid blocking the
+                      turnaround area. If you have a large vehicle or trailer, please contact us in advance.
                     </p>
                   </div>
                 </li>
@@ -116,8 +115,8 @@ export default function CheckInPage() {
                       Locate the Front Door
                     </h3>
                     <p className="text-mountain leading-relaxed">
-                      The main entrance is located on the front of the cabin, facing the driveway.
-                      You will see a keypad lock on the door.
+                      The main entrance is up the steps off the driveway. You will see a keypad
+                      lock on the door.
                     </p>
                   </div>
                 </li>

@@ -44,7 +44,7 @@ const ruleSections: RuleSection[] = [
     title: 'Parking',
     icon: '🚗',
     rules: [
-      'Park only in designated parking areas - the driveway and marked spaces.',
+      'Park only in the driveway.',
       'Maximum of 4 vehicles allowed on the property.',
       'Do not block the turnaround area.',
       'Large vehicles, trailers, or RVs require prior approval.',
@@ -65,6 +65,16 @@ const ruleSections: RuleSection[] = [
     icon: '🐾',
     rules: [
       'No pets allowed.',
+    ],
+  },
+  {
+    title: 'Fire Pit',
+    icon: '🔥',
+    rules: [
+      'Firewood is not guaranteed and depends on what is left from previous guests.',
+      'Please do not overfill the fire pit with wood.',
+      'It is your responsibility to stay near the fire until it is completely out.',
+      'Use the fire pit at your own risk. Any damage from use of the fire pit will be charged to you.',
     ],
   },
   {
