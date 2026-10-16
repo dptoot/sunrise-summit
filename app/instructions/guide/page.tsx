@@ -20,6 +20,7 @@ interface GuideSection {
   instructions: string[];
   tips?: string;
   listStyle?: 'numbered' | 'bullets';
+  groups?: { heading: string; intro?: string; steps: string[] }[];
 }
 
 const guideSections: GuideSection[] = [
@@ -53,10 +54,48 @@ const guideSections: GuideSection[] = [
     id: 'fireplaces',
     title: 'Fireplaces',
     instructions: [
-      'Status: The fireplaces are currently being replaced and should not be turned on.',
-      'Since we\'re heading into the warm season, you won\'t need them — enjoy the mountain breeze instead!',
+      'Type: Propane gas log sets with a remote control. There is no wood burning — the logs are for show only.',
+      'Safety: Keep the fireplace screen in place and any glass doors open while it is on. This fireplace gives off carbon monoxide, so never leave it running while you sleep or leave the house.',
+      'Smell gas? Do not light anything, do not touch light switches or use a phone inside. Leave the cabin and contact us right away.',
     ],
-    tips: 'If you have any questions about the fireplaces, please contact us.',
+    listStyle: 'bullets',
+    groups: [
+      {
+        heading: 'Option 1: The pilot light is OFF (lighting it from scratch)',
+        intro: 'Use this if the little pilot flame is out, the remote does nothing, or no one has used the fireplace in a while.',
+        steps: [
+          'Smell around the fireplace and down by the floor. Propane is heavier than air and settles low. If you smell gas, stop and see the safety note above.',
+          'Make sure the gas valve is open.',
+          'Find the control knob on the burner under the logs.',
+          'Push the control knob in and turn it to PILOT. Keep it pressed in.',
+          'While still pressing the knob, press the igniter button over and over until the small pilot flame lights.',
+          'Keep the knob pressed in for 30 to 60 seconds after the pilot lights. This warms the safety sensor that keeps the pilot burning.',
+          'Let go of the knob. If the pilot goes out, wait a few minutes for any gas to clear, then repeat steps 3 to 5.',
+          'Once the pilot stays lit, turn the control knob to ON. The main burner is now ready and the remote controls it.',
+          'Go to Option 2 below to turn the flames on.',
+        ],
+      },
+      {
+        heading: 'Option 2: The pilot light is ON (using the remote)',
+        intro: 'Use this if the small pilot flame is already burning and the knob is on ON.',
+        steps: [
+          'Make sure the control knob is turned to ON.',
+          'Press any button on the remote to wake it up.',
+          'Press ON on the remote. The main flame lights.',
+          'To pick how it runs, press MODE. Manual mode keeps the flame on until you press OFF. Thermostat mode holds the room at a set temperature and the flame cycles on and off by itself.',
+          'In thermostat mode, use SET to pick the temperature you want.',
+          'Press OFF when you are done. The pilot stays lit, so the fireplace is ready for next time.',
+        ],
+      },
+      {
+        heading: 'Shutting it all the way down',
+        steps: [
+          'Press OFF on the remote, or turn the control knob to PILOT, to turn off the main flame.',
+          'To shut everything off, including the pilot, turn the control knob to OFF. Please do this before you check out.',
+        ],
+      },
+    ],
+    tips: 'If the remote stops responding, try fresh batteries in both the remote and the receiver box, then contact us. If the pilot will not light, the main flame lights then goes out, or the flame looks weak or yellow, turn it off, open a window, and contact us. The fireplace has a safety sensor that shuts it off when the room is low on fresh air.',
   },
   {
     id: 'thermostat',
@@ -221,6 +260,29 @@ export default function HouseGuidePage() {
                         );
                       })}
                     </ul>
+
+                    {section.groups && (
+                      <div className="mt-8 space-y-8">
+                        {section.groups.map((group) => (
+                          <div key={group.heading}>
+                            <h3 className="text-lg font-semibold text-navy mb-2">{group.heading}</h3>
+                            {group.intro && (
+                              <p className="text-mountain text-sm mb-4">{group.intro}</p>
+                            )}
+                            <ol className="space-y-3">
+                              {group.steps.map((step, i) => (
+                                <li key={i} className="flex gap-3">
+                                  <span className="flex-shrink-0 w-6 h-6 bg-coral/20 text-coral rounded-full flex items-center justify-center text-sm font-bold">
+                                    {i + 1}
+                                  </span>
+                                  <p className="text-mountain leading-relaxed">{step}</p>
+                                </li>
+                              ))}
+                            </ol>
+                          </div>
+                        ))}
+                      </div>
+                    )}
 
                     {section.tips && (
                       <div className="mt-6 p-4 bg-sand/50 rounded-lg">
