@@ -121,6 +121,7 @@ const guideSections: GuideSection[] = [
     instructions: [
       'Walking Sticks: Walking sticks are in the hall coat closet and are available for you to use. When you return them, please clean off any mud or dirt.',
       'Fire Pit: Please review the fire pit rules on our House Rules page before lighting a fire.',
+      'Grill: The propane tank is under the grill. Please turn off the propane tank after each use by turning the valve clockwise.',
     ],
     listStyle: 'bullets',
   },

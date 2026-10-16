@@ -191,7 +191,10 @@ export default function CheckInPage() {
                   <div>
                     <p className="font-medium text-navy">Trash</p>
                     <p className="text-mountain text-sm">
-                      Gather all trash and place it in the outdoor trash bins. Do not leave food waste inside.
+                      Gather all trash and take it to the trash bins. They are in a plastic shed with two
+                      doors, behind the wooden shed you can see from the front door. Follow the trash sign.
+                      To avoid attracting bears, secure the bin lids and firmly close both shed doors.
+                      Do not leave food waste inside.
                     </p>
                   </div>
                 </li>

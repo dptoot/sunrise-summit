@@ -80,7 +80,7 @@ const ruleSections: RuleSection[] = [
     title: 'Check-out Reminders',
     rules: [
       'Check-out time is 10:00 AM.',
-      'Take out all trash to the outdoor bins.',
+      'Take all trash to the bins in the plastic shed behind the wooden shed (follow the trash sign). Secure the bin lids and firmly close both shed doors to avoid attracting bears.',
       'Leave used towels on the tile floor of the main bathroom or near the laundry room.',
       'Turn off all lights, fans, and electronics.',
       'Lock all doors and windows.',
